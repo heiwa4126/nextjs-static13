@@ -15,8 +15,13 @@
 - `pnpm build && pnpm start` で `Error: "next start" does not work with "output: export" configuration. Use "npx serve@latest out" instead.` と怒られる。
 - ので `pnpx serve@latest out` を実行し(`pnpm serve`にした) <http://localhost:3000> で確認する
 
+## TODO
+
+- ActionsでGitHub Pagesに出す。
+  - そのためにはbaseDirの処理が要る。
+
 ## メモ: nextconfig の output オプションに指定できる値
 
 - `undefined` - デフォルトのビルド出力。.next/ ディレクトリ以下に出力される。本番モードの`next start` (または`npm run start`)、またはVercelのようなホスティングプロバイダで動作する。
-- `'standalone'` - .next/standalone/ ディレクトリに スタンドアロンビルドとして出力される。必要なファイル/依存関係のみを含む(public/と.next/static/に注意)。Dockerコンテナでセルフホストする場合に便利。
-- `'export'` - 静的なHTML/CSS/JSのみを含む。out/ディレクトリに出力される。Node.jsサーバーなしでセルフホストする場合に便利。
+- `'standalone'` - .next/standalone/ ディレクトリに スタンドアロンビルドとして出力される。必要なファイル/依存関係のみを含む(public/と.next/static/に注意)。Dockerコンテナでセルフホストする場合に便利。(ここ参照: [next\.config\.js Options: output \| Next\.js](https://nextjs.org/docs/pages/api-reference/next-config-js/output#automatically-copying-traced-files))
+- `'export'` - 静的なHTML/CSS/JSのみを含む。**out/ ディレクトリ** に出力される。Node.jsサーバーなしでセルフホストする場合に便利。
