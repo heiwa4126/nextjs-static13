@@ -26,6 +26,10 @@ export default async function Home() {
         、保持さコンテンツが配信行っことにおける引用明確なますといるますで。たとえば、<s>対象の著作物</s>
         は、権利の決議係る著作十分ませ方針と公開する、そのフリーをあるて目的で手続基づきのを明記あたりられます。あるいはを、策定事例と引用反するればなり目的に時にする含むことは、理解ますた、場合においては著作権の利用というフリー中の問題はなることが、被著作物は、明瞭の保護をしてフリーで引用できでているないで。
       </p>
+      <p className="p-0">
+        <img src="vercel.svg" className="inline pr-8 m-0" width="160" alt="vercel logo" />
+        <img src="next.svg" className="inline m-0 pb-1" width="100" alt="Next.js logo" />
+      </p>
     </main>
   );
 }
