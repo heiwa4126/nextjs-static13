@@ -1,4 +1,6 @@
+import { basePath } from '@/next.config';
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 const title = 'Next.js 13 Static Exports Test';
 export const metadata: Metadata = {
@@ -30,8 +32,8 @@ export default async function Home() {
         は、権利の決議係る著作十分ませ方針と公開する、そのフリーをあるて目的で手続基づきのを明記あたりられます。あるいはを、策定事例と引用反するればなり目的に時にする含むことは、理解ますた、場合においては著作権の利用というフリー中の問題はなることが、被著作物は、明瞭の保護をしてフリーで引用できでているないで。
       </p>
       <p className="p-0">
-        <img src="vercel.svg" className="inline pr-8 m-0" width="160" alt="vercel logo" />
-        <img src="next.svg" className="inline m-0 pb-1" width="100" alt="Next.js logo" />
+        <Image src={`${basePath}/vercel.svg`} className="inline pr-8 m-0" width={160} height={100} alt="vercel logo" />
+        <Image src={`${basePath}/next.svg`} className="inline m-0 pb-1" width={100} height={100} alt="Next.js logo" />
       </p>
     </main>
   );
