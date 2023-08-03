@@ -17,8 +17,7 @@
 
 ## TODO
 
-- Actions で GitHub Pages に出す。
-  - そのためには basePath の処理が要る。
+- Actions で GitHub Pages に出す。⇒ 出しました **[Next.js 13 Static Exports Test](https://heiwa4126.github.io/nextjs-static13/)**
 
 ## メモ
 
@@ -59,3 +58,28 @@ serve tmp
 ### .env\* はすでに存在している環境変数を上書きしない
 
 `.env*`の評価順も同様
+
+### なんか1個404になる
+
+`/nextjs-static13.txt?_rsc=1ag7k` にアクセスしてるけど、これは何?
+これは`index.txt`であるべきじゃないの?
+
+どうも next/link の prefech のバグらしい。とりあえず
+
+```html
+<Link href="/" prefetch={false}>home</Link>
+```
+
+にして凌いだ。
+
+### next/font は使わないほうがいいかも
+
+大量に .woff2ファイルを読み込んでて遅い。
+普通に [linkで書いたほうが](https://fonts.google.com/noto/specimen/Noto+Sans+JP) いいんじゃないか? (自分がよくわかってないだけかも)
+
+[Optimizing: Fonts | Next.js](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) を読むと
+`next/font`の利点は
+「フォントをセルフホストすること」
+「Googleに知られないこと」
+であるらしい。
+「使えばかならず早くなる」ものではなさそう。
