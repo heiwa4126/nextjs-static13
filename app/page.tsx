@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 
-const title = 'Next.js 13 Static Exports test';
+const title = 'Next.js 13 Static Exports Test';
 export const metadata: Metadata = {
   title
 };
 
 export default async function Home() {
   return (
-    <main className="mx-4 my-3">
+    <main>
       <h1>{title}</h1>
       <p>
         参照:{' '}
@@ -18,7 +18,10 @@ export default async function Home() {
       <p>
         Lorem ipsum dolor sit, amet <strong>consectetur</strong> adipisicing elit. Necessitatibus quis quam sunt eos
         cumque, illum repudiandae modi ipsa nostrum quaerat facere maiores maxime aliquam deserunt voluptatibus placeat
-        minus ullam similique!
+        minus ullam similique! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum massa sed felis
+        egestas, vel fermentum dui consequat. Curabitur rhoncus quam eu purus faucibus, nec dictum felis viverra. Fusce
+        suscipit, purus at finibus accumsan, lectus quam elementum risus, at venenatis elit justo vel dui. Integer
+        iaculis nisi ipsum, sit amet ultrices nunc eleifend in?
       </p>
       <p>
         文章は内容本に著作する未然ますない上、<strong>利用しれ財団を</strong>

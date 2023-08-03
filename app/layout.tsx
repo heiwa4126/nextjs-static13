@@ -16,6 +16,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className={`${noto.className} prose max-w-none lg:text-lg xl:text-xl`} data-theme="light">
         <nav className="mx-4 mt-2">
           <Link href="/">home</Link>
+          <Link href="/about">about</Link>
         </nav>
         {children}
       </body>

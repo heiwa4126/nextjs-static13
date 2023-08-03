@@ -5,20 +5,20 @@
 
 ## 手順
 
-- 普通のNext.jsプロジェクトを作る
+- 普通のNext.jsプロジェクトを作った。
   - `pnpx create-next-app@latest --no-src-dir --import-alias '@/*' --ts --tailwind --eslint --app --use-pnpm static13`
-  - lauout.tsxとpage.tsxとglobal.cssをいじる。
-  - tailwindのタイポグラフィやDaisyUIのテーマなど入れる(オプション)。
-- `pnpm dev` で動作を確認する。
-- `pnpm build && pnpm start` で動作確認する。
-- next.config.js に `output: 'export'` 書く。
+  - lauout.tsxとpage.tsxとglobal.cssをいじった。
+  - tailwindのタイポグラフィやDaisyUIのテーマなど入れた(オプション)。
+- `pnpm dev` で動作を確認した。
+- `pnpm build && pnpm start` で動作確認。
+- next.config.js に `output: 'export'` 書いた。
 - `pnpm build && pnpm start` で `Error: "next start" does not work with "output: export" configuration. Use "npx serve@latest out" instead.` と怒られる。
-- ので `pnpx serve@latest out` を実行し(`pnpm serve`にした) <http://localhost:3000> で確認する
+- ので `pnpx serve@latest out` を実行し(`pnpm serve` にした) <http://localhost:3000> で確認。
 
 ## TODO
 
-- ActionsでGitHub Pagesに出す。
-  - そのためにはbaseDirの処理が要る。
+- Actions で GitHub Pages に出す。
+  - そのためには basePath の処理が要る。
 
 ## メモ: nextconfig の output オプションに指定できる値
 
